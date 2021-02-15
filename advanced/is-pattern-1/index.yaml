@@ -1,3 +1,34 @@
 apiVersion: v1
-entries: {}
-generated: "2021-02-15T17:44:03.457824551+01:00"
+entries:
+  is-pattern-1:
+  - apiVersion: v1
+    appVersion: 5.11.0
+    created: "2021-02-15T18:04:39.337195818+01:00"
+    dependencies:
+    - condition: wso2.mysql.enabled
+      name: mysql-is
+      repository: https://helm.wso2.com
+      version: 5.11.0-2
+    description: A Helm chart for the deployment of WSO2 Identity And Access Management pattern 1
+    digest: a07e7e9ef67a302c40160837608800427327858ba4a5b3e48e92776624c51aad
+    icon: https://wso2.cachefly.net/wso2/sites/all/images/wso2logo.svg
+    name: is-pattern-1
+    urls:
+    - is-pattern-1-5.11.0.tgz
+    version: 5.11.0
+  mysql-is:
+  - apiVersion: v1
+    appVersion: "5.7"
+    created: "2021-02-15T18:04:39.342881958+01:00"
+    dependencies:
+    - name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.2.3
+    description: A Helm chart for MySQL based deployment of WSO2 Identity And Access Management Datasources
+    digest: 7a4c2a8acb85d297e3837e18bb79a80221c094184f6f07dc5f2179cebc4d1129
+    icon: https://wso2.cachefly.net/wso2/sites/all/images/wso2logo.svg
+    name: mysql-is
+    urls:
+    - charts/mysql-is-5.11.0-2.tgz
+    version: 5.11.0-2
+generated: "2021-02-15T18:04:39.330351116+01:00"
