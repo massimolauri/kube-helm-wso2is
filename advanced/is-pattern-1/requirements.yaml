@@ -13,6 +13,6 @@
 # limitations under the License.
 dependencies:
   - name: mysql-is
-    version: "5.11.0-2"
-    repository: "https://helm.wso2.com"
+    version: "5.11.0"
+    repository: "https://raw.githubusercontent.com/massimolauri/kube-helm-wso2is/master/advanced/is-pattern-1"
     condition: wso2.mysql.enabled
