@@ -48,8 +48,8 @@ wso2:
       # Container image configurations
       # If a custom image must be used, uncomment 'dockerRegistry' and provide its value
       # dockerRegistry: ""
-      imageName: "wso2is"
-      imageTag: "5.10.0"
+      imageName: "massimolauri/wso2is"
+      imageTag: "5.11.0-centos"
       # Refer to the Kubernetes documentation on updating images (https://kubernetes.io/docs/concepts/containers/images/#updating-images)
       imagePullPolicy: Always
 
