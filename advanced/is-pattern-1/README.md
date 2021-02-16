@@ -20,12 +20,8 @@ For advanced details on the deployment pattern, please refer the official
 
 * WSO2 product Docker images used for the Kubernetes deployment.
   
-  WSO2 product Docker images available at [DockerHub](https://hub.docker.com/u/wso2/) package General Availability (GA)
-  versions of WSO2 products with no [WSO2 Updates](https://wso2.com/updates).
+  WSO2 product Docker images available at [DockerHub](https://hub.docker.com/repository/docker/massimolauri/wso2is).
 
-  For a production grade deployment of the desired WSO2 product-version, it is highly recommended to use the relevant
-  Docker image which packages WSO2 Updates, available at [WSO2 Private Docker Registry](https://docker.wso2.com/). In order
-  to use these images, you need an active [WSO2 Subscription](https://wso2.com/subscription).
   <br><br>
 
 * Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Helm](https://helm.sh/docs/intro/install/)
@@ -39,14 +35,14 @@ For advanced details on the deployment pattern, please refer the official
 * Add the WSO2 Helm chart repository.
 
     ```
-     helm repo add wso2 https://helm.wso2.com && helm repo update
+     helm repo add wso2 https://raw.githubusercontent.com/massimolauri/kube-helm-wso2is/master/advanced/is-pattern-1 && helm repo update
     ```
 
 ## Quick Start Guide
 
 ### 1. Install the Helm Chart
 
-You can install the relevant Helm chart either from [WSO2 Helm Chart Repository](https://hub.helm.sh/charts/wso2) or by source.
+
 
 **Note:**
 
@@ -57,7 +53,7 @@ You can install the relevant Helm chart either from [WSO2 Helm Chart Repository]
  **Helm version 2**
 
  ```
- helm install --name <RELEASE_NAME> wso2/is-pattern-1 --version 5.11.0-2 --namespace <NAMESPACE>
+ helm install my-is-pattern-1 wso2is-pattern1/is-pattern-1 --version 5.11.0 --namespace <NAMESPACE>
  ```
 
  **Helm version 3**
@@ -71,7 +67,7 @@ You can install the relevant Helm chart either from [WSO2 Helm Chart Repository]
  - Deploy the Kubernetes resources using the Helm Chart
  
     ```
-    helm install <RELEASE_NAME> wso2/is-pattern-1 --version 5.11.0-2 --namespace <NAMESPACE>
+    helm install my-is-pattern-1 wso2is-pattern1/is-pattern-1 --version 5.11.0 --namespace <NAMESPACE>
     ```
 
 The above steps will deploy the deployment pattern using WSO2 product Docker images available at DockerHub.
@@ -82,7 +78,7 @@ please provide your WSO2 Subscription Credentials via input values (using `--set
 Refer the following example.
 
 ```
- helm install --name <RELEASE_NAME> wso2/is-pattern-1 --version 5.11.0-2 --namespace <NAMESPACE> --set wso2.subscription.username=<SUBSCRIPTION_USERNAME> --set wso2.subscription.password=<SUBSCRIPTION_PASSWORD>
+ helm install my-is-pattern-1 wso2is-pattern1/is-pattern-1 --version 5.11.0 --namespace <NAMESPACE> --set wso2.subscription.username=<SUBSCRIPTION_USERNAME> --set wso2.subscription.password=<SUBSCRIPTION_PASSWORD>
 ```
 
 #### Install Chart From Source
